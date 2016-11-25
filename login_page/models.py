@@ -1,9 +1,9 @@
 from django.db import models
 from django.utils import timezone
 
-
-class Login(models.Model):
+class SignIn(models.Model):
     email = models.CharField(max_length=200)
-    password = models.TextField()
+    password = models.CharField(max_length=15)
+    repeat_password = models.CharField(max_length=15)
     login_date = models.DateTimeField(
             default=timezone.now)
